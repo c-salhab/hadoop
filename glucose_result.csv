@@ -1,0 +1,27 @@
+age_category,gender,glucose_category,count
+20-29,Femme,normal,2
+20-29,Homme,normal,1
+30-39,Femme,above normal,79
+30-39,Femme,normal,1051
+30-39,Femme,well above normal,44
+30-39,Homme,above normal,42
+30-39,Homme,normal,648
+30-39,Homme,well above normal,17
+40-49,Femme,above normal,889
+40-49,Femme,normal,10844
+40-49,Femme,well above normal,561
+40-49,Homme,above normal,474
+40-49,Homme,normal,6671
+40-49,Homme,well above normal,334
+50-59,Femme,above normal,1739
+50-59,Femme,normal,20033
+50-59,Femme,well above normal,2105
+50-59,Homme,above normal,890
+50-59,Homme,normal,9891
+50-59,Homme,well above normal,905
+60+,Femme,above normal,709
+60+,Femme,normal,6541
+60+,Femme,well above normal,933
+60+,Homme,above normal,368
+60+,Homme,normal,3797
+60+,Homme,well above normal,432
