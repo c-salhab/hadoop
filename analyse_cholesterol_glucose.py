@@ -30,16 +30,16 @@ dataset_file = dataset_file.withColumn("gender", when(col("gender") == "2", "Hom
 
 # convert cholesterol to categories
 dataset_file = dataset_file.withColumn("cholesterol_category",
-                                       when(col("cholesterol") == 1, "normal")
-                                       .when(col("cholesterol") == 2, "above normal")
-                                       .when(col("cholesterol") == 3, "well above normal")
+                                       when(col("cholesterol") == 1, "1 normal")
+                                       .when(col("cholesterol") == 2, "2 above normal")
+                                       .when(col("cholesterol") == 3, "3 well above normal")
                                        .otherwise("unknown"))
 
 # convert glucose to categories
 dataset_file = dataset_file.withColumn("glucose_category",
-                                       when(col("gluc") == 1, "normal")
-                                       .when(col("gluc") == 2, "above normal")
-                                       .when(col("gluc") == 3, "well above normal")
+                                       when(col("gluc") == 1, "1 normal")
+                                       .when(col("gluc") == 2, "2 above normal")
+                                       .when(col("gluc") == 3, "3 well above normal")
                                        .otherwise("unknown"))
 
 # perform the analysis for cholesterol
