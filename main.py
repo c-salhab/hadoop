@@ -44,11 +44,10 @@ glucose_result = dataset_file.groupBy("age_category", "gender", "glucose_categor
     .agg(count("*").alias("count")) \
     .orderBy("age_category", "gender", "glucose_category")
 
-# Analysis of the impact of lifestyle habits on blood pressure
-lifestyle_impact = dataset_file.groupBy("age_category", "gender", "smoke", "alco", "active") \
+lifestyle_impact = dataset_file.groupBy("age_category", "gender", "smoke", "alco", "active" , "cardio") \
     .agg(
-        avg("ap_hi").alias("avg_systolic_bp"),
-        avg("ap_lo").alias("avg_diastolic_bp")
+        avg("ap_hi").alias("pa_diastolique_moyenne"),
+        avg("ap_lo").alias("pa_systolique_moyenne")
     ) \
     .orderBy("age_category", "gender", "smoke", "alco", "active")
 
