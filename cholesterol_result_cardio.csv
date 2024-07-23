@@ -1,0 +1,27 @@
+age_category,gender,cholesterol_category,count,cardio_disease
+20-29,Femme,1 normal,2,0
+20-29,Homme,1 normal,1,0
+30-39,Femme,1 normal,989,179
+30-39,Femme,2 above normal,142,60
+30-39,Femme,3 well above normal,43,25
+30-39,Homme,1 normal,614,138
+30-39,Homme,2 above normal,74,35
+30-39,Homme,3 well above normal,19,13
+40-49,Femme,1 normal,9927,3096
+40-49,Femme,2 above normal,1609,821
+40-49,Femme,3 well above normal,758,556
+40-49,Homme,1 normal,6114,2161
+40-49,Homme,2 above normal,928,559
+40-49,Homme,3 well above normal,437,321
+50-59,Femme,1 normal,17305,7956
+50-59,Femme,2 above normal,3430,1970
+50-59,Femme,3 well above normal,3142,2371
+50-59,Homme,1 normal,8818,4190
+50-59,Homme,2 above normal,1557,1003
+50-59,Homme,3 well above normal,1311,960
+60+,Femme,1 normal,5347,3357
+60+,Femme,2 above normal,1222,893
+60+,Femme,3 well above normal,1614,1332
+60+,Homme,1 normal,3268,1978
+60+,Homme,2 above normal,587,409
+60+,Homme,3 well above normal,742,596
