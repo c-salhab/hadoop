@@ -1,27 +1,27 @@
-age_category,gender,glucose_category,count
-20-29,Femme,1 normal,2
-20-29,Homme,1 normal,1
-30-39,Femme,1 normal,1051
-30-39,Femme,2 above normal,79
-30-39,Femme,3 well above normal,44
-30-39,Homme,1 normal,648
-30-39,Homme,2 above normal,42
-30-39,Homme,3 well above normal,17
-40-49,Femme,1 normal,10844
-40-49,Femme,2 above normal,889
-40-49,Femme,3 well above normal,561
-40-49,Homme,1 normal,6671
-40-49,Homme,2 above normal,474
-40-49,Homme,3 well above normal,334
-50-59,Femme,1 normal,20033
-50-59,Femme,2 above normal,1739
-50-59,Femme,3 well above normal,2105
-50-59,Homme,1 normal,9891
-50-59,Homme,2 above normal,890
-50-59,Homme,3 well above normal,905
-60+,Femme,1 normal,6541
-60+,Femme,2 above normal,709
-60+,Femme,3 well above normal,933
-60+,Homme,1 normal,3797
-60+,Homme,2 above normal,368
-60+,Homme,3 well above normal,432
+age_category,gender,glucose_category,count,cardio_disease
+20-29,Femme,normal,2,0
+20-29,Homme,normal,1,0
+30-39,Femme,above normal,79,30
+30-39,Femme,normal,1051,217
+30-39,Femme,well above normal,44,17
+30-39,Homme,above normal,42,20
+30-39,Homme,normal,648,161
+30-39,Homme,well above normal,17,5
+40-49,Femme,above normal,889,429
+40-49,Femme,normal,10844,3746
+40-49,Femme,well above normal,561,298
+40-49,Homme,above normal,474,257
+40-49,Homme,normal,6671,2623
+40-49,Homme,well above normal,334,161
+50-59,Femme,above normal,1739,1017
+50-59,Femme,normal,20033,9951
+50-59,Femme,well above normal,2105,1329
+50-59,Homme,above normal,890,551
+50-59,Homme,normal,9891,5064
+50-59,Homme,well above normal,905,538
+60+,Femme,above normal,709,509
+60+,Femme,normal,6541,4398
+60+,Femme,well above normal,933,675
+60+,Homme,above normal,368,265
+60+,Homme,normal,3797,2425
+60+,Homme,well above normal,432,293
