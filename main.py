@@ -36,12 +36,24 @@ dataset_file = dataset_file.withColumn("glucose_category",
 
 # perform the analysis for cholesterol
 cholesterol_result = dataset_file.groupBy("age_category", "gender", "cholesterol_category") \
-    .agg(count("*").alias("count")) \
+    .agg(count("*").alias("count"), sum(when(col("cardio") == 1, 1).otherwise(0)).alias("cardio_disease")) \
+    .orderBy("age_category", "gender", "cholesterol_category")
+
+result_gender = dataset_file.groupBy("gender") \
+    .agg(count("*").alias("count"), sum(when(col("cardio") == 1, 1).otherwise(0)).alias("cardio_disease")) \
+    .orderBy("age_category", "gender", "cholesterol_category")
+
+result_age = dataset_file.groupBy("age_category") \
+    .agg(count("*").alias("count"), sum(when(col("cardio") == 1, 1).otherwise(0)).alias("cardio_disease")) \
     .orderBy("age_category", "gender", "cholesterol_category")
 
 # perform the analysis for glucose
 glucose_result = dataset_file.groupBy("age_category", "gender", "glucose_category") \
-    .agg(count("*").alias("count")) \
+    .agg(count("*").alias("count"), sum(when(col("cardio") == 1, 1).otherwise(0)).alias("cardio_disease")) \
+    .orderBy("age_category", "gender", "glucose_category")
+
+glucose_result_glucose = dataset_file.groupBy("glucose_category") \
+    .agg(count("*").alias("count"), sum(when(col("cardio") == 1, 1).otherwise(0)).alias("cardio_disease")) \
     .orderBy("age_category", "gender", "glucose_category")
 
 lifestyle_impact = dataset_file.groupBy("age_category", "gender", "smoke", "alco", "active" , "cardio") \
@@ -62,5 +74,14 @@ pandas_df1.to_csv("cholesterol_result.csv", index=False)
 
 pandas_df1 = glucose_result.toPandas()
 pandas_df1.to_csv("glucose_result.csv", index=False)
+
+pandas_df1 = result_gender.toPandas()
+pandas_df1.to_csv("result_gender.csv", index=False)
+
+pandas_df1 = result_age.toPandas()
+pandas_df1.to_csv("result_age.csv", index=False)
+
+pandas_df1 = glucose_result_glucose.toPandas()
+pandas_df1.to_csv("glucose_result_glucose.csv", index=False)
 
 spark.stop()
