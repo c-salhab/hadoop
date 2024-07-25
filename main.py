@@ -48,7 +48,7 @@ glucose_result = dataset_file.groupBy("age_category", "gender", "glucose_categor
 lifestyle_impact = dataset_file.groupBy("age_category", "gender", "smoke", "alco", "active") \
     .agg(
         avg("ap_hi").alias("avg_systolic_bp"),
-        avg("ap_lo").alias("avg_diastolic_bp")
+        avg("ap_lo").alias("avg_diastolic_bp") auq
     ) \
     .orderBy("age_category", "gender", "smoke", "alco", "active")
 
